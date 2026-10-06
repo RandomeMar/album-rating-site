@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Artists{% endblock %}
+
+{% block content %}
+    <div id="artist-grid" class="grid">
+    {% for artist in artists %}
+        <div class="card-wrap">
+            <div class="card artist-card">
+                <img src="{% static 'images/default-artist.jpg' %}" alt="{{ artist.name }}">
+                <p>{{ artist.name }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

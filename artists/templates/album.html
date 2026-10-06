@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Songs{% endblock %}
+
+{% block content %}
+    <ol>
+    {% for song in songs %}
+        <li>{{ song.name }}</li>
+    {% endfor %}
+    </ol>
+{% endblock %}

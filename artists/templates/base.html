@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% block extra_css %}{% endblock %}
+        <title>
+            {% block title %}BASE TITLE{% endblock %}
+        </title>
+    </head>
+    <body>
+        <header>
+            <button id="backBtn" class="hidden">← Back</button>
+            <h1 id="pageTitle">Artists</h1>
+            <button id="addBtn">+</button>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </body> 
+</html>

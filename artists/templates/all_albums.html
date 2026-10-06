@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Albums{% endblock %}
+
+{% block content %}
+    <div id="grid">
+    {% for album in albums %}
+        <div class="card-wrap">
+            <div class="card">
+                <img src="" alt="{{ album.name }}">
+                <p>{{ album.name }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
